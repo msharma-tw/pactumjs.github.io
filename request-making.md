@@ -85,6 +85,22 @@ it('DELETE /user', async () => {
   await pactum.spec()
     .delete('http://domain.com/user');
 });
+
+it('OPTIONS /user', async () => {
+  await pactum.spec()
+    .delete('http://domain.com/user');
+});
+
+it('TRACE /user', async () => {
+  await pactum.spec()
+    .delete('http://domain.com/user');
+});
+
+it('HEAD /user', async () => {
+  await pactum.spec()
+    .withMethod('HEAD')
+    .withPath('http://domain.com/user');
+});
 ```
 
 In general, we set the base url to a constant value during API Testing. See [Request Settings](request-making?id=request-settings) to learn more about default configuration.
